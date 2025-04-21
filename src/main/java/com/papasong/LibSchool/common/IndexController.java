@@ -11,4 +11,10 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/libList")
+    public String libList(){
+
+        return "libList";
+    }
+
 }
