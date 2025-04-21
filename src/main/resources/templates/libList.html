@@ -205,49 +205,49 @@
 
                 <thead>
                   <tr>
-                    <th>자원의 명칭</th>
-                    <th>대체</th>
-                    <th>주된 책임을 진 개체</th>
-                    <th>등록일</th>
-                    <th>소속(통제)DB</th>
-                    <th>기관별주제분류체계</th>
-                    <th>핵심주제어</th>
-                    <th>자원의 크기나 재생시간</th>
-                    <th>내용</th>
-                    <th>관련장소</th>
-                    <th>해당시간대</th>
-                    <th>사람</th>
-                    <th>언어</th>
-                    <th>참조자원제목</th>
-                    <th>썸네일</th>
-                    <th>자원에 대한 권리</th>
-                    <th>저작권</th>
-                    <th>지식정보자원위치정보</th>
-                    <th>기여자</th>
+                    <th>학교명</th>
+                    <th>학교구분</th>
+                    <th>학교설립일자</th>
+                    <th>학교주소</th>
+                    <th>학교위치_위도</th>
+                    <th>학교위치_경도</th>
+                    <th>도서관명</th>
+                    <th>도서관유형</th>
+                    <th>도서관주소</th>
+                    <th>도서관설명</th>
+                    <th>도서관부가설명</th>
+                    <th>도서관홈페이지주소</th>
+                    <th>도서관전화번호</th>
+                    <th>운영기관명</th>
+                    <th>관리기관명</th>
+                    <th>데이터기준일자</th>
+                    <th>도서관위도</th>
+                    <th>도서관경도</th>
+                    <th>인접거리</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  <tr th:each="festa : ${festas}">
-                    <td th:text="${festa.title}"></td>
-                    <td th:text="${festa.alternativeTitle}"></td>
-                    <td th:text="${festa.creator}"></td>
-                    <td th:text="${festa.regDate}"></td>
-                    <td th:text="${festa.collectionDb}"></td>
-                    <td th:text="${festa.subjectCategory}"></td>
-                    <td th:text="${festa.subjectKeyword}"></td>
-                    <td th:text="${festa.extent}"></td>
-                    <td th:text="${festa.description}"></td>
-                    <td th:text="${festa.spatialCoverage}"></td>
-                    <td th:text="${festa.temporalCoverage}"></td>
-                    <td th:text="${festa.person}"></td>
-                    <td th:text="${festa.language}"></td>
-                    <td th:text="${festa.sourceTitle}"></td>
-                    <td th:text="${festa.referenceIdentifier}"></td>
-                    <td th:text="${festa.rights}"></td>
-                    <td th:text="${festa.copyrightOthers}"></td>
-                    <td th:text="${festa.url}"></td>
-                    <td th:text="${festa.contributor}"></td>
+                  <tr th:each="item : ${list}">
+                    <td th:text="${item.schNm}"></td>
+                    <td th:text="${item.schTp}"></td>
+                    <td th:text="${item.instDt}"></td>
+                    <td th:text="${item.schRoadAddr}"></td>
+                    <td th:text="${item.schLatPos}"></td>
+                    <td th:text="${item.schLotPos}"></td>
+                    <td th:text="${item.fcltyNm}"></td>
+                    <td th:text="${item.lclasNm}"></td>
+                    <td th:text="${item.fcltyRoadNmAddr}"></td>
+                    <td th:text="${item.description}"></td>
+                    <td th:text="${item.subDescription}"></td>
+                    <td th:text="${item.homepageUrl}"></td>
+                    <td th:text="${item.telNo}"></td>
+                    <td th:text="${item.openInstNm}"></td>
+                    <td th:text="${item.pvsnInstNm}"></td>
+                    <td th:text="${item.dataStdDate}"></td>
+                    <td th:text="${item.fcltyLatPos}"></td>
+                    <td th:text="${item.fcltyLotPos}"></td>
+                    <td th:text="${item.dist}"></td>
 
                   </tr>
                 </tbody>
