@@ -1,12 +1,10 @@
 package com.papasong.LibSchool.member;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
@@ -14,6 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 public class Member {
 
     @Id
@@ -27,5 +26,12 @@ public class Member {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private boolean deleted;
+
+    @PrePersist
+    public void prePersist(){
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = null;
+        this.deleted = false;
+    }
 
 }

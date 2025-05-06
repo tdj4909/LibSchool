@@ -15,7 +15,7 @@ import java.net.URLEncoder;
 @Controller
 public class IndexController {
 
-    @GetMapping("/")
+    @GetMapping("/index")
     public String index(){
         return "index";
     }
