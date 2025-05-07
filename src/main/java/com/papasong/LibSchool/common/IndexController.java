@@ -1,6 +1,7 @@
 package com.papasong.LibSchool.common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,9 @@ import java.net.URLEncoder;
 @Controller
 public class IndexController {
 
+    @Value("${LIB_API_KEY}")
+    private String libApiKey;
+
     @GetMapping("/index")
     public String index(){
         return "index";
@@ -23,7 +27,7 @@ public class IndexController {
     @GetMapping("/libList")
     public String libList(Model model) throws IOException {
 
-        String serviceKey = "";
+        String serviceKey = libApiKey;
 
         StringBuilder urlBuilder = new StringBuilder("http://api.kcisa.kr/openapi/API_CNV_065/request"); /*URL*/
         urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=" + serviceKey); /*서비스키*/
