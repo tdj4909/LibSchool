@@ -45,10 +45,10 @@ public class MemberController {
 
     }*/
 
-    // 로그아웃
+/*    // 로그아웃
     @RequestMapping("/logout")
     public String logout(){
         SecurityContextHolder.clearContext();
         return "redirect:/login?logout";
-    }
+    }*/
 }
