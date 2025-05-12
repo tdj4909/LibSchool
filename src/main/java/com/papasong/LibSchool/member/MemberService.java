@@ -27,7 +27,7 @@ public class MemberService {
         repository.save(member);
     }
 
-/*    public boolean processLogin(MemberDto dto){
+    public boolean processLogin(MemberDto dto){
         Optional<Member> optionalMember = repository.findByUsername(dto.getUsername());
 
         if (optionalMember.isEmpty()){
@@ -37,7 +37,7 @@ public class MemberService {
 
             if (passwordEncoder.matches(dto.getPassword(), member.getPassword())){
 
-                UserDetails userDetails = User.builder()
+                /*UserDetails userDetails = User.builder()
                                 .username(member.getUsername())
                                 .password(member.getPassword())
                                 .roles("USER")
@@ -50,7 +50,7 @@ public class MemberService {
                 );
 
                 SecurityContextHolder.getContext().setAuthentication(authentication);
-
+*/
                 System.out.println("로그인 되었습니다.");
                 return true;
             } else {
@@ -59,6 +59,6 @@ public class MemberService {
         }
 
         return false;
-    }*/
+    }
 
 }

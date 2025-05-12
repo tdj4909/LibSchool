@@ -2,6 +2,7 @@ package com.papasong.LibSchool.common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,10 @@ public class IndexController {
     private String libApiKey;
 
     @GetMapping("/index")
-    public String index(){
+    public String index(Authentication auth){
+        System.out.println(auth);
+        System.out.println(auth.getName());
+        System.out.println(auth.isAuthenticated());
         return "index";
     }
 

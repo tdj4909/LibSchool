@@ -22,7 +22,9 @@ public class Member {
     @Column(nullable = false, unique = true)
     private String username;
 
+    @Column(nullable = false)
     private String password;
+
     private String name;
     private String email;
     private LocalDateTime createdAt;
