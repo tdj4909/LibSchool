@@ -32,7 +32,7 @@ public class MemberController {
         return "member/login";
     }
 
-    // DB에서 검증 후 로그인
+/*    // DB에서 검증 후 로그인
     @PostMapping("/processLogin")
     public String processLogin(MemberDto dto){
         boolean chk = service.processLogin(dto);
@@ -48,7 +48,7 @@ public class MemberController {
     // 로그아웃
     @RequestMapping("/logout")
     public String logout(){
-        /*SecurityContextHolder.clearContext();*/
+        *//*SecurityContextHolder.clearContext();*//*
         return "redirect:/login?logout";
-    }
+    }*/
 }
